@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EGFR→CXCL8 · FSC JUN · b10</title><link rel="stylesheet" href="../styles.css"></head><body>
+<header class="top"><div class="wrap">
+  <p class="crumb"><a href="../index.html">FuSION explanations</a> / EGFR&#8201;&#8594;&#8201;CXCL8 · FSC JUN</p>
+  <h1>EGFR <span class="arrow">&#8594;</span> CXCL8 &nbsp;—&nbsp; FSC JUN <span style="font-size:16px;color:#898781;font-weight:400">(hsa3725)</span></h1>
+  <p class="sub">Reachability bound 10 · coexp&#8201;&#8805;&#8201;700, frozen&#8201;&#8805;&#8201;800 · &#8804;&#8201;8 node / &#8804;&#8201;8 edge relaxations</p>
+</div></header>
+<div class="wrap">
+  <div class="result">Excluding JUN raises the cost by +1 node across the whole frontier — JUN is a natural participant (a direct AP-1 activator of CXCL8/IL8).<br>
+    Minimum relaxations — <b>with FSC:</b> 7 &nbsp;·&nbsp; <b>without FSC:</b> 8 &nbsp;→&nbsp; significant (natural participant).<span class="note">Note: The (n=7, e=0) corner of the without-FSC curve returned z3 <em>unknown</em> after a 4&nbsp;h solve, so the +1 is strongly indicated but not machine-certified.</span>
+  </div>
+
+  <figure>
+    <img src="pareto.png" alt="Pareto frontier for EGFR to CXCL8, FSC JUN, bound 10">
+    <figcaption>Pareto frontier of node vs edge relaxations. Blue circles = with FSC (JUN); red squares = without FSC. Each point below links to its explanation subgraph.</figcaption>
+  </figure>
+
+  <div class="panels">
+    <div class="panel">
+      <h3><span class="dot" style="background:#2a78d6"></span> With FSC (JUN)</h3>
+      <p class="meta">6 PO points · JUN forced active · min total 7</p>
+      <div class="chips"><a class="chip with" href="pex_incl_n7_e0.html"><span class="g">●</span> <b>7</b>&nbsp;node &nbsp;·&nbsp; <b>0</b>&nbsp;edge<span class="tot">total 7</span></a>
+<a class="chip with" href="pex_incl_n6_e1.html"><span class="g">●</span> <b>6</b>&nbsp;node &nbsp;·&nbsp; <b>1</b>&nbsp;edge<span class="tot">total 7</span></a>
+<a class="chip with" href="pex_incl_n5_e2.html"><span class="g">●</span> <b>5</b>&nbsp;node &nbsp;·&nbsp; <b>2</b>&nbsp;edge<span class="tot">total 7</span></a>
+<a class="chip with" href="pex_incl_n4_e3.html"><span class="g">●</span> <b>4</b>&nbsp;node &nbsp;·&nbsp; <b>3</b>&nbsp;edge<span class="tot">total 7</span></a>
+<a class="chip with" href="pex_incl_n3_e4.html"><span class="g">●</span> <b>3</b>&nbsp;node &nbsp;·&nbsp; <b>4</b>&nbsp;edge<span class="tot">total 7</span></a>
+<a class="chip with" href="pex_incl_n2_e6.html"><span class="g">●</span> <b>2</b>&nbsp;node &nbsp;·&nbsp; <b>6</b>&nbsp;edge<span class="tot">total 8</span></a>
+</div>
+    </div>
+    <div class="panel">
+      <h3><span class="sq" style="background:#e34948"></span> Without FSC (JUN)</h3>
+      <p class="meta">7 PO points · JUN avoided · min total 8</p>
+      <div class="chips"><a class="chip wo" href="pex_excl_n8_e0.html"><span class="g">■</span> <b>8</b>&nbsp;node &nbsp;·&nbsp; <b>0</b>&nbsp;edge<span class="tot">total 8</span></a>
+<a class="chip wo" href="pex_excl_n7_e1.html"><span class="g">■</span> <b>7</b>&nbsp;node &nbsp;·&nbsp; <b>1</b>&nbsp;edge<span class="tot">total 8</span></a>
+<a class="chip wo" href="pex_excl_n6_e2.html"><span class="g">■</span> <b>6</b>&nbsp;node &nbsp;·&nbsp; <b>2</b>&nbsp;edge<span class="tot">total 8</span></a>
+<a class="chip wo" href="pex_excl_n5_e3.html"><span class="g">■</span> <b>5</b>&nbsp;node &nbsp;·&nbsp; <b>3</b>&nbsp;edge<span class="tot">total 8</span></a>
+<a class="chip wo" href="pex_excl_n4_e4.html"><span class="g">■</span> <b>4</b>&nbsp;node &nbsp;·&nbsp; <b>4</b>&nbsp;edge<span class="tot">total 8</span></a>
+<a class="chip wo" href="pex_excl_n3_e5.html"><span class="g">■</span> <b>3</b>&nbsp;node &nbsp;·&nbsp; <b>5</b>&nbsp;edge<span class="tot">total 8</span></a>
+<a class="chip wo" href="pex_excl_n2_e7.html"><span class="g">■</span> <b>2</b>&nbsp;node &nbsp;·&nbsp; <b>7</b>&nbsp;edge<span class="tot">total 9</span></a>
+</div>
+    </div>
+  </div>
+
+  <a class="back" href="../index.html">&#8592; All experiments</a>
+  <footer>FuSION — EGFR&#8201;&#8594;&#8201;CXCL8 explanation subgraphs. Interactive graphs render with vis.js (inlined; no external requests).</footer>
+</div></body></html>

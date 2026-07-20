@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EGFR→CXCL8 explanation subgraphs — FuSION</title><link rel="stylesheet" href="styles.css"></head><body>
+<header class="top"><div class="wrap">
+  <h1>EGFR <span class="arrow">&#8594;</span> CXCL8 &nbsp;—&nbsp; explanation subgraphs</h1>
+  <p class="sub">FuSION Pareto-optimal signaling explanations · path bound 10</p>
+</div></header>
+<div class="wrap">
+  <p class="lead">Each experiment tests one candidate node (FSC) on the EGFR&#8201;&#8594;&#8201;CXCL8 explanation over the merged KEGG graph, comparing the minimal-relaxation frontier with the node <b>forced active</b> (with FSC) against the node <b>avoided</b> (without FSC). Every Pareto point links to an interactive subgraph showing exactly which nodes and edges were relaxed. Node &amp; edge <em>relaxations</em> are the assumptions the model had to drop to make the explanation consistent — fewer is better.</p>
+  <div class="grid">
+<a class="card" href="jun_b10/index.html">
+  <img src="jun_b10/pareto.png" alt="Pareto frontier, FSC JUN">
+  <div class="body">
+    <h2>FSC JUN <span class="fid">hsa3725</span></h2>
+    <p>Excluding JUN raises the cost by +1 node across the whole frontier — JUN is a natural participant (a direct AP-1 activator of CXCL8/IL8).</p>
+    <span class="badge b-pos">-1 to exclude</span>
+  </div>
+</a>
+<a class="card" href="dusp1_b10/index.html">
+  <img src="dusp1_b10/pareto.png" alt="Pareto frontier, FSC DUSP1">
+  <div class="body">
+    <h2>FSC DUSP1 <span class="fid">hsa1843</span></h2>
+    <p>Forcing the MAPK phosphatase DUSP1 active costs +2 relaxations vs excluding it — antagonistic to the EGFR → CXCL8 explanation.</p>
+    <span class="badge b-neg">+2 to include</span>
+  </div>
+</a>
+<a class="card" href="fosb_b10/index.html">
+  <img src="fosb_b10/pareto.png" alt="Pareto frontier, FSC FOSB">
+  <div class="body">
+    <h2>FSC FOSB <span class="fid">hsa2354</span></h2>
+    <p>The with- and without-FSC frontiers are identical — FOSB is compatible with the explanation but not required (no significance).</p>
+    <span class="badge b-neu">Δ 0</span>
+  </div>
+</a></div>
+  <footer>Generated from FuSION runs (coexp&#8201;&#8805;&#8201;700, frozen&#8201;&#8805;&#8201;800, &#8804;&#8201;8 node / &#8804;&#8201;8 edge). Interactive graphs use inlined vis.js — no external requests.</footer>
+</div></body></html>
